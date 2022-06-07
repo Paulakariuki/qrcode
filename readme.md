@@ -1,11 +1,11 @@
 # How to use the file
 - Ensure that you are working on a virtual environment
-    -- To set up a virtual environment on windows
-    -- pip3 install virtualenv-win
-    -- mkvirutalenv 'name_desired'
-    -- workon 'name_desired
+    - To set up a virtual environment on windows
+    - pip3 install virtualenv-win
+    - mkvirutalenv 'name_desired'
+    - workon 'name_desired
 - Once in the virtual environment install the libraries in the requirements.txt file
-    -- pip3 install -r requirements.txt
+    - pip3 install -r requirements.txt
 - Run the python script
-    -- python app.py
+    - python app.py
 - Check /images for qrcode saved in .jpg format
