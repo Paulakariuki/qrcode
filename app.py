@@ -3,17 +3,18 @@ import os. path
 import time as time
 
 def shop():
-    # initialize qr code library
-    qr = qrcode.QRCode(
-    version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_L,
-    box_size=10,
-    border=4,
-    )
+    
     print("=========================\n")
     count = int(input("Enter the number of shops you'd like to generate the QR code/s for:\n"))
     # Working with a for loop to iterate over the process based on the input above 
     for x in range(count):
+        # initialize qr code library
+        qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+        )
         # prompt user to key in the value they would like to serialize using qr  
         url = input("Enter the link you'd like to generate:\n")
         shop = input("Enter the name of the vendor/shop:\n")
