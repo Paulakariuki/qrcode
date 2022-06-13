@@ -6,6 +6,9 @@ def shop():
     
     print("=========================\n")
     count = int(input("Enter the number of shops you'd like to generate the QR code/s for:\n"))
+    campaign_source = "qrcode"
+    campaign_medium = "cpc"
+    campaign_name = "qr%20code%20store%20locator"
     # Working with a for loop to iterate over the process based on the input above 
     for x in range(count):
         # initialize qr code library
@@ -18,7 +21,7 @@ def shop():
         # prompt user to key in the value they would like to serialize using qr  
         url = input("Enter the link you'd like to generate:\n")
         shop = input("Enter the name of the vendor/shop:\n")
-        sanitize = "https://"+url
+        sanitize = "https://"+url+"/?utm_source="+campaign_source+"&utm_medium="+campaign_medium+"&utm_campaign="+campaign_name
         print(sanitize)
         qr.add_data(sanitize)
         qr.make(fit=True)
